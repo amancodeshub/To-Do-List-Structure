@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>To-Do List</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc; /* Light background for better contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        .he {
+            text-align: center;
+            color: #1e4e89; /* Blue color for header */
+            margin-bottom: 20px;
+        }
+
+        .he h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        hr {
+            width: 50%;
+            margin: 10px auto;
+            border: 1px solid #1e4e89; /* Adds a blue line under the header */
+        }
+
+        /* Add Task Section */
+        .add {
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .add:hover {
+            transform: scale(1.05); /* Adds a subtle hover effect */
+        }
+
+        .add input {
+            width: 94%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .add input:focus {
+            border-color: #1e4e89; /* Highlights input field on focus */
+        }
+
+        .add button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1e4e89;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add button:hover {
+            background-color: #174b74; /* Darker shade of blue on hover */
+        }
+
+        /* Task List Styling */
+        .tas {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tas p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tas p:hover {
+            background-color: #e6f3ff; /* Light blue on hover */
+        }
+
+        .tas input[type="checkbox"] {
+            transform: scale(1.4);
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .add, .tas {
+                width: 95%;
+            }
+
+            .he h1 {
+                font-size: 30px; /* Adjust header font size on smaller screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="he">
+        <h1>MY TO-DO LIST</h1>
+        <hr>
+    </div>
+    
+    <div class="add">
+        <input type="text" placeholder="Add a new task...">
+        <button>ADD Task</button>
+    </div>
+
+    <div class="tas">
+        <p>Do coding in VS CODE <input type="checkbox" name="checkbox" id="check1"></p>
+        <p>Create design of webpages in Figma <input type="checkbox" name="checkbox" id="check2"></p>
+        <p>Do all the questions of Area related to Circles of NCERT <input type="checkbox" name="checkbox" id="check3"></p>
+    </div>
+</body>
+</html>
